@@ -9,7 +9,7 @@ admin/config.php
 image
 #
 ## misllenous
-php.ini
-index.php
-crossdomain.xml
+/php.ini
+/index.php
+/crossdomain.xml
 #
