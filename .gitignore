@@ -6,9 +6,9 @@ admin/config.php
 **/cache
 #
 ## ignore image
-image
+/image
 # ignore system
-system
+/system
 
 #
 ## misllenous
