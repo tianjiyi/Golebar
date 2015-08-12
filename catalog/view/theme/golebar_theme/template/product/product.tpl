@@ -52,12 +52,12 @@
           <ul class="list-unstyled" style="padding:0; margin:0; padding-top:30px; line-height:25px;">
             <?php if (!$special) { ?>
             <li>
-              <span style>价 格：&nbsp;<span style="color:#ff2a69; font-size:20px; font-weight:100;"><?php echo $price; ?></span></span>
+              <span style><?php echo $text_price; ?>&nbsp;<span style="color:#ff2a69; font-size:20px; font-weight:100;"><?php echo $price; ?></span></span>
             </li>
             <?php } else { ?>
             <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
             <li>
-              <span style>价格: &nbsp;&nbsp;<span style="color:#ff2a69; font-size:20px; font-weight:100;"><?php echo $special; ?><span></span>
+              <span style><?php echo $text_price; ?>&nbsp;&nbsp;<span style="color:#ff2a69; font-size:20px; font-weight:100;"><?php echo $special; ?><span></span>
             </li>
             <?php } ?>
             <!--
@@ -83,10 +83,10 @@
             <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>" style="color:black; font-weight:600;"><?php echo $manufacturer; ?></a></li>
             <?php } ?>
             <?php if ($location) { ?>
-            	<li>产 地： <?php echo $location; ?></li>
+            	<li><?php echo $text_location; ?><?php echo $location; ?></li>
             <?php } ?>
             <?php if ($weight) { ?>
-            	<li>净 含 量 ：<?php echo $model; ?></li>
+            	<li><?php echo $text_weight; ?><?php echo $model; ?></li>
             <?php } ?>
             <?php if ($reward) { ?>
             	<li><?php echo $text_reward; ?> <?php echo $reward; ?> <span style="padding-left:5px;" class="hint--right" data-hint="1购乐吧积分等同于$0.01现金抵用卷"><i class="fa fa-question-circle fa-1x" style="color:#ff2a69; font-size:14px;"></i></span></li>
@@ -96,7 +96,7 @@
             
             <div class="rating">
 	            
-            	<p>评 分：
+            	<p><?php echo $text_rating; ?> 
 	              <?php for ($i = 1; $i <= 5; $i++) { ?>
 	              <?php if ($rating < $i) { ?>
 	              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x " style="font-size:15px; "></i></span>

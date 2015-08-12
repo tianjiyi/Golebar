@@ -242,6 +242,10 @@ class ControllerProductProduct extends Controller {
 			$data['text_tags'] = $this->language->get('text_tags');
 			$data['text_related'] = $this->language->get('text_related');
 			$data['text_loading'] = $this->language->get('text_loading');
+                        $data['text_price'] = $this->language->get('text_price');
+                        $data['text_location'] = $this->language->get('text_location');
+                        $data['text_weight'] = $this->language->get('text_weight');
+                        $data['text_rating'] = $this->language->get('text_rating');
 
 			$data['entry_qty'] = $this->language->get('entry_qty');
 			$data['entry_name'] = $this->language->get('entry_name');
