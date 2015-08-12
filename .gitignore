@@ -1,0 +1,15 @@
+# ignore configure
+config.php
+admin/config.php
+#
+# ignore cahce folder
+**/cache
+#
+## ignore image
+image
+#
+## misllenous
+php.ini
+index.php
+crossdomain.xml
+#
