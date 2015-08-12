@@ -7,9 +7,12 @@ admin/config.php
 #
 ## ignore image
 image
+# ignore system
+system
+
 #
 ## misllenous
 /php.ini
 /index.php
 /crossdomain.xml
-#
+
