@@ -21,5 +21,5 @@ $_['text_search_shortcut1']			= 'Duckneck';
 $_['text_search_shortcut2']			= 'Lonely god';
 $_['text_search_shortcut3']			= 'Joyoung';
 $_['text_search_shortcut4']			= 'Soymilk';
-$_['text_search_shortcut5']			= 'hair dye';
+$_['text_search_shortcut5']			= 'Hair dye';
 $_['text_search_shortcut6']			= 'Electric Appliances';
