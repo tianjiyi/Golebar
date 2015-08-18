@@ -34,8 +34,17 @@
               <?php } ?>
             </div>
           </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_name_en; ?></label>
+            <div class="col-sm-10">
+              <input type="text" name="name_en" value="<?php echo $name_en; ?>" placeholder="<?php echo $entry_name_en; ?>" id="input-name" class="form-control" />
+              <?php if ($error_name) { ?>
+              <div class="text-danger"><?php echo $error_name   ; ?></div>
+              <?php } ?>
+            </div>
+          </div>
 		  
-		  <div class="form-group">
+          <div class="form-group">
             <label class="col-sm-2 control-label" for="input-titlelink"><?php echo $entry_titlelink; ?></label>
             <div class="col-sm-10">
               <input type="text" name="titlelink" value="<?php echo $titlelink; ?>" placeholder="<?php echo $entry_titlelink; ?>" id="input-titlelink" class="form-control" />
@@ -86,6 +95,13 @@
               <input type="text" name="selected" value="<?php echo $selected; ?>" placeholder="<?php echo $entry_selected; ?>" id="input-selected" class="form-control" />
             </div>
           </div>
+            
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-selected"><?php echo $entry_selected_en; ?></label>
+            <div class="col-sm-10">
+              <input type="text" name="selected_en" value="<?php echo $selected_en; ?>" placeholder="<?php echo $entry_selected_en; ?>" id="input-selected" class="form-control" />
+            </div>
+          </div>
           
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-selectedlink"><?php echo $entry_selectedlink; ?></label>
@@ -122,6 +138,13 @@
         <label class="col-sm-2 control-label" for="input-image2title"><?php echo $entry_image2_title; ?></label>
         <div class="col-sm-10">
           <input type="text" name="image2title" value="<?php echo $image2title; ?>" placeholder="<?php echo $entry_image2_title; ?>" id="input-image2title" class="form-control" />
+        </div>
+      </div>
+            
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="input-image2title_en"><?php echo $entry_image2_title_en; ?></label>
+        <div class="col-sm-10">
+          <input type="text" name="image2title_en" value="<?php echo $image2title_en; ?>" placeholder="<?php echo $entry_image2_title_en; ?>" id="input-image2title_en" class="form-control" />
         </div>
       </div>
       

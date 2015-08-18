@@ -28,6 +28,7 @@ class ControllerModuleProductCategory extends Controller {
 		$data['text_disabled'] = $this->language->get('text_disabled');
 
 		$data['entry_name'] = $this->language->get('entry_name');
+                $data['entry_name_en'] = $this->language->get('entry_name_en'); //TODO: consider pop dynamically, if at least 3 languages needed
 		$data['entry_product'] = $this->language->get('entry_product');
 		$data['entry_limit'] = $this->language->get('entry_limit');
 		$data['entry_width'] = $this->language->get('entry_width');
@@ -36,6 +37,7 @@ class ControllerModuleProductCategory extends Controller {
 		
 		$data['entry_titlelink'] = $this->language->get('entry_titlelink');
 		$data['entry_selected'] = $this->language->get('entry_selected');
+                $data['entry_selected_en'] = $this->language->get('entry_selected_en');
 		$data['entry_selected_placeholder'] = $this->language->get('entry_selected_placeholder');
 		$data['entry_selectedlink'] = $this->language->get('entry_selectedlink');
 		
@@ -43,6 +45,7 @@ class ControllerModuleProductCategory extends Controller {
 		$data['entry_image2'] = $this->language->get('entry_image2');
 		$data['entry_image2_link'] = $this->language->get('entry_image2_link');
 		$data['entry_image2_title'] = $this->language->get('entry_image2_title');
+                $data['entry_image2_title_en'] = $this->language->get('entry_image2_title_en');
 		
 		$data['entry_ad_title'] = $this->language->get('ad_title');
 
@@ -120,6 +123,14 @@ class ControllerModuleProductCategory extends Controller {
 		} else {
 			$data['name'] = '';
 		}
+                
+                if (isset($this->request->post['name_en'])) {
+			$data['name_en'] = $this->request->post['name_en'];
+		} elseif (!empty($module_info) && array_key_exists('name_en', $module_info)) {
+			$data['name_en'] = $module_info['name_en'];
+		} else {
+			$data['name_en'] = '';
+		}
 
 		$this->load->model('catalog/product');
 
@@ -159,6 +170,14 @@ class ControllerModuleProductCategory extends Controller {
 		} else {
 			$data['selected'] = '';
 		}
+                
+                if (isset($this->request->post['selected_en'])) {
+			$data['selected_en'] = $this->request->post['selected_en'];
+		} elseif (!empty($module_info) && array_key_exists('selected_en', $module_info)) {
+			$data['selected_en'] = $module_info['selected_en'];
+		} else {
+			$data['selected_en'] = '';
+		}
 		
 		if (isset($this->request->post['titlelink'])) {
 			$data['titlelink'] = $this->request->post['titlelink'];
@@ -190,6 +209,14 @@ class ControllerModuleProductCategory extends Controller {
 			$data['image2title'] = $module_info['image2title'];
 		} else {
 			$data['image2title'] = '';
+		}
+                
+                if (isset($this->request->post['image2title_en'])) {
+			$data['image2title_en'] = $this->request->post['image2title_en'];
+		} elseif (!empty($module_info) && array_key_exists('image2title_en', $module_info)) {
+			$data['image2title_en'] = $module_info['image2title_en'];
+		} else {
+			$data['image2title_en'] = '';
 		}
 		
 		if (isset($this->request->post['adtitle'])) {
