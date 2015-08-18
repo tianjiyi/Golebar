@@ -122,18 +122,21 @@ class ControllerCommonHeader extends Controller {
         
         $data['lang_code'] = $this->language->get('code');
         if ($data['lang_code'] === 'en') {
-
-            if (!empty($this->config->get('categorypictures_image1title_en'))) {
-                $data['picTitle1'] = explode("|", ($this->config->get('categorypictures_image1title_en')));
+            $image1title_en = $this->config->get('categorypictures_image1title_en');
+            if (!empty($image1title_en)) {
+                $data['picTitle1'] = explode("|", $image1title_en);
             }
-            if (!empty($this->config->get('categorypictures_image2title_en'))) {
-                $data['picTitle1'] = explode("|", ($this->config->get('categorypictures_image2title_en')));
+            $image2title_en = $this->config->get('categorypictures_image2title_en');
+            if (!empty($image2title_en)) {
+                $data['picTitle1'] = explode("|", $image2title_en);
             }
-            if (!empty($this->config->get('categorypictures_image3title_en'))) {
-                $data['picTitle1'] = explode("|", ($this->config->get('categorypictures_image3title_en')));
+            $image3title_en = $this->config->get('categorypictures_image3title_en');
+            if (!empty($image3title_en)) {
+                $data['picTitle1'] = explode("|", $image3title_en);
             }
-            if (!empty($this->config->get('categorypictures_image4title_en'))) {
-                $data['picTitle1'] = explode("|", ($this->config->get('categorypictures_image4title_en')));
+            $image4title_en = $this->config->get('categorypictures_image4title_en');
+            if (!empty($image4title_en)) {
+                $data['picTitle1'] = explode("|", $image4title_en);
             }
         }
 
