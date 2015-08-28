@@ -17,6 +17,19 @@ class ControllerCommonFooter extends Controller {
 		$data['text_order'] = $this->language->get('text_order');
 		$data['text_wishlist'] = $this->language->get('text_wishlist');
 		$data['text_newsletter'] = $this->language->get('text_newsletter');
+                $data['text_shopping_guide']  = $this->language->get('text_shopping_guide');
+                $data['text_payment']  = $this->language->get('text_payment');
+                $data['text_aftersale']  = $this->language->get('text_aftersale');
+                $data['text_delivery']  = $this->language->get('text_delivery');
+                $data['text_customer_service']  = $this->language->get('text_customer_service');
+                $data['text_genuine_product']  = $this->language->get('text_genuine_product');
+                $data['text_minium_price']  = $this->language->get('text_minium_price');
+                $data['text_freeshipping']  = $this->language->get('text_freeshipping');
+                $data['text_aftersale_2']  = $this->language->get('text_aftersale_2');
+                $data['text_membership_reward']  = $this->language->get('text_membership_reward');
+                $data['text_tracking']  = $this->language->get('text_tracking');
+                $data['text_wechat']  = $this->language->get('text_wechat');
+                $data['text_weibo']  = $this->language->get('text_weibo');
 
 		$this->load->model('catalog/information');
 

@@ -14,7 +14,8 @@ $_['text_logout']        = 'Logout';
 $_['text_checkout']      = 'Checkout';
 $_['text_search']        = 'Search';
 $_['text_all']           = 'Show All';
-
+$_['text_freeshipping']			= 'Free Shipping Over $49!';
+$_['text_flashsale']			= 'Register for Flash Sale';
 
 //search shortcut
 $_['text_search_shortcut1']			= 'Duckneck';

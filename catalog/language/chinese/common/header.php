@@ -20,6 +20,8 @@ $_['text_items']    		= '%s 个商品 - %s';
 $_['text_welcome']  		= '欢迎光临，您可以<a href="%s">登录</a> 或 <a href="%s">注册一个帐户</a>。';
 $_['text_logged']   		= '您登录为<a href="%s">%s</a> <b>(</b> <a href="%s">退出</a> <b>)</b>';
 $_['text_reward']			= '我的积分';
+$_['text_freeshipping']			= '全场满49包邮！';
+$_['text_flashsale']			= '注册参与秒杀限抢';
 
 //search shortcut
 $_['text_search_shortcut1']			= '鸭脖';

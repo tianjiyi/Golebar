@@ -3,7 +3,7 @@
     <div class="row col-sm-9">
       
       <div class="col-sm-2" style="width:20%">
-        <h5 style="font-size: 15px;">购物指南</h5>
+        <h5 style="font-size: 15px;"><?php echo $text_shopping_guide; ?></h5>
         <ul class="list-unstyled">
           
           <li><a href="<?php echo $informations[0]['href']; ?>"><?php echo $informations[0]['title']; ?></a></li>
@@ -14,7 +14,7 @@
       </div>
       
       <div class="col-sm-2" style="width:20%">
-        <h5 style="font-size: 15px;">付款说明</h5>
+        <h5 style="font-size: 15px;"><?php echo $text_payment; ?></h5>
         <ul class="list-unstyled">
           <li><a href="<?php echo $informations[2]['href']; ?>"><?php echo $informations[2]['title']; ?></a></li>
           <li><a href="<?php echo $informations[4]['href']; ?>"><?php echo $informations[4]['title']; ?></a></li>
@@ -23,7 +23,7 @@
       </div>
 
       <div class="col-sm-2" style="width:20%">
-        <h5 style="font-size: 15px;">售后服务</h5>
+        <h5 style="font-size: 15px;"><?php echo $text_aftersale; ?></h5>
         <ul class="list-unstyled">
           <li><a href="<?php echo $informations[5]['href']; ?>"><?php echo $informations[5]['title']; ?></a></li>
           <li><a href="<?php echo $informations[6]['href']; ?>"><?php echo $informations[6]['title']; ?></a></li>
@@ -32,7 +32,7 @@
       </div>
       
       <div class="col-sm-2" style="width:20%">
-        <h5 style="font-size: 15px;">配送服务</h5>
+        <h5 style="font-size: 15px;"><?php echo $text_delivery; ?></h5>
         <ul class="list-unstyled">
           <li><a href="<?php echo $informations[8]['href']; ?>"><?php echo $informations[8]['title']; ?></a></li>
           <li><a href="<?php echo $informations[9]['href']; ?>"><?php echo $informations[9]['title']; ?></a></li>
@@ -41,10 +41,10 @@
       </div>
       
       <div class="col-sm-2" style="width:20%">
-        <h5 style="font-size: 15px;">客户服务</h5>
+        <h5 style="font-size: 15px;"><?php echo $text_customer_service; ?></h5>
         <ul class="list-unstyled">
           <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
-          <li><a href="<?php echo $order; ?>">订单速查</a></li>
+          <li><a href="<?php echo $order; ?>"><?php echo $text_tracking; ?></a></li>
         </ul>
       </div>
       
@@ -77,11 +77,11 @@
     <hr>
     
     <div class="container" style="height:25px;">
-			    <div class="col-md-2 col-md-offset-1" style="border-left: 1px solid rgba(246, 246, 246, .3); text-align: center;"><img src="./catalog/view/theme/golebar_theme/image/footer/crown.png" height="15px" width="18px" style="margin-bottom: 7px;"> 100%正品保证</div>
-			    <div class="col-md-2" style="border-left: 1px solid rgba(246, 246, 246, .3); text-align: center;"><img src="./catalog/view/theme/golebar_theme/image/footer/tip.png" height="18px" width="18px" style="margin-bottom: 7px;"> 全网低价保证</div>
-			    <div class="col-md-2" style="border-left: 1px solid rgba(246, 246, 246, .3); text-align: center;"><img src="./catalog/view/theme/golebar_theme/image/footer/rocket.png" height="18px" width="18px" style="margin-bottom: 7px;"> 满$49全美包邮</div>
-			    <div class="col-md-2" style="border-left: 1px solid rgba(246, 246, 246, .3); text-align: center;"><img src="./catalog/view/theme/golebar_theme/image/footer/hand-shake.png" height="18px" width="18px" style="margin-bottom: 7px;"> 贴心售后服务</div>
-			    <div class="col-md-2" style="border-left: 1px solid rgba(246, 246, 246, .3); border-right: 1px solid rgba(246, 246, 246, .3); text-align: center;"><img src="./catalog/view/theme/golebar_theme/image/footer/reward.png" height="15px" width="18px" style="margin-bottom: 7px;"> 会员积分奖励</div>
+			    <div class="col-md-2 col-md-offset-1" style="border-left: 1px solid rgba(246, 246, 246, .3); text-align: center;"><img src="./catalog/view/theme/golebar_theme/image/footer/crown.png" height="15px" width="18px" style="margin-bottom: 7px;"><?php echo $text_genuine_product; ?></div>
+			    <div class="col-md-2" style="border-left: 1px solid rgba(246, 246, 246, .3); text-align: center;"><img src="./catalog/view/theme/golebar_theme/image/footer/tip.png" height="18px" width="18px" style="margin-bottom: 7px;"><?php echo $text_minium_price; ?></div>
+			    <div class="col-md-2" style="border-left: 1px solid rgba(246, 246, 246, .3); text-align: center;"><img src="./catalog/view/theme/golebar_theme/image/footer/rocket.png" height="18px" width="18px" style="margin-bottom: 7px;"><?php echo $text_freeshipping; ?></div>
+			    <div class="col-md-2" style="border-left: 1px solid rgba(246, 246, 246, .3); text-align: center;"><img src="./catalog/view/theme/golebar_theme/image/footer/hand-shake.png" height="18px" width="18px" style="margin-bottom: 7px;"><?php echo $text_aftersale_2; ?></div>
+			    <div class="col-md-2" style="border-left: 1px solid rgba(246, 246, 246, .3); border-right: 1px solid rgba(246, 246, 246, .3); text-align: center;"><img src="./catalog/view/theme/golebar_theme/image/footer/reward.png" height="15px" width="18px" style="margin-bottom: 7px;"> <?php echo $text_membership_reward; ?></div>
     </div>
 	<hr>
     
@@ -98,11 +98,11 @@
 	        <div class="col-sm-3" style="padding:0; width: 20%;">
 		        <div class="col-sm-6" style="padding:0;"> 
 		        	<img src="/catalog/view/theme/golebar_theme/image/footer/wechat.png">
-		        	<div align="center" style="width: 72%; line-height: 30px;">微信平台</div>
+		        	<div align="center" style="width: 72%; line-height: 30px;"><?php echo $text_wechat; ?></div>
 		        </div>
 				<div class="col-sm-6" style="padding:0;"> 
 		        	<img src="/catalog/view/theme/golebar_theme/image/footer/weibo.png">
-		        	<div align="center" style="width: 72%; line-height: 30px;">微博平台</div>
+		        	<div align="center" style="width: 72%; line-height: 30px;"><?php echo $text_weibo; ?></div>
 				</div>
 	        </div>
 	</div>

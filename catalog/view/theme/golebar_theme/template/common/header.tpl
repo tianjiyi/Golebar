@@ -90,7 +90,7 @@
 			<div id="top-deal" style="padding-top:8px;">
 				<!--<img src="catalog/view/theme/golebar_theme/image/deal.png" style="margin-top:-10px";>-->
 				<a href="<?php echo $register; ?>" title="<?php echo $text_checkout; ?>">
-					<span class="hidden-xs hidden-sm hidden-md">注册参与秒杀限抢</span>
+					<span class="hidden-xs hidden-sm hidden-md"><?php echo $text_flashsale; ?></span>
 				</a>
 			</div>
 		</li>
@@ -143,7 +143,7 @@
 			  	<li><a href="<?php echo $picTitle3[1]; ?>"><?php echo $picTitle3[0]; ?></a></li>
 			  	<li><a href="<?php echo $picTitle4[1]; ?>"><?php echo $picTitle4[0]; ?></a></li>
 			  </ul>
-			  <div style="float:right; line-height:40px; color:#ff2a69; font-size:14px;">全场满49包邮！</div>
+			  <div style="float:right; line-height:40px; color:#ff2a69; font-size:14px;"><?php echo $text_freeshipping; ?></div>
 			</div>
 	  </div>
   </nav>
