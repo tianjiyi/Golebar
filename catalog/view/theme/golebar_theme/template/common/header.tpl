@@ -59,7 +59,7 @@
      <?php echo $language; ?> 
       <a href="http://mp.weixin.qq.com/s?__biz=MzA3NTMyODA4Mw==&mid=205372945&idx=1&sn=995448c5bae6c4e968f13af0ae8af2f7&scene=4#wechat_redirect"><img src="./catalog/view/theme/golebar_theme/image/wechat.png" height:20px; width="20px;" id="top-social-btn" style="margin-top: 5px; float: left;"></a>
       <a href="http://www.weibo.com/u/5436925047"><img src="./catalog/view/theme/golebar_theme/image/weibo.png" height:20px; width="20px;" id="top-social-btn" style="margin-top: 5px; float: left;"></a>
-      <a href="https://www.facebook.com/golebar?fref=ts"><img src="./catalog/view/theme/golebar_theme/image/facebook.png" height:20px; width="20px;" id="top-social-btn" style="margin-top: 5px; float: left;"></a><div style="margin-top: 5px; float: left;">关注我们</div>
+      <a href="https://www.facebook.com/golebar?fref=ts"><img src="./catalog/view/theme/golebar_theme/image/facebook.png" height:20px; width="20px;" id="top-social-btn" style="margin-top: 5px; float: left;"></a><div style="margin-top: 5px; float: left;"><?php echo $text_followus; ?></div>
     <div id="top-links" class="nav pull-right" style="padding:0;">
       <ul class="list-inline">
 
