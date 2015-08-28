@@ -22,6 +22,7 @@ $_['text_logged']   		= '您登录为<a href="%s">%s</a> <b>(</b> <a href="%s">�
 $_['text_reward']			= '我的积分';
 $_['text_freeshipping']			= '全场满49包邮！';
 $_['text_flashsale']			= '注册参与秒杀限抢';
+$_['text_welcomeback']			= '欢迎您回来';
 
 //search shortcut
 $_['text_search_shortcut1']			= '鸭脖';

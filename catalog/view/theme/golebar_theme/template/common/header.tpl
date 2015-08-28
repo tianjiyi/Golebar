@@ -65,7 +65,7 @@
 
         <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" style=""></i> <span class="hidden-xs hidden-sm hidden-md">
 	        <?php if ($logged) { ?>
-	        	<span>欢迎您回来, <?php echo $firstname; ?></span>
+	        	<span><?php echo $text_welcomeback; ?>, <?php echo $firstname; ?></span>
 	        <?php } else { ?>
 	        	<?php echo $text_register; ?>/<?php echo $text_login; ?>
 	        <?php } ?>

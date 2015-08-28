@@ -60,6 +60,7 @@ class ControllerCommonHeader extends Controller {
         $data['text_reward'] = $this->language->get('text_reward');
         $data['text_freeshipping'] = $this->language->get('text_freeshipping');
         $data['text_flashsale'] = $this->language->get('text_flashsale');
+        $data['text_welcomeback'] = $this->language->get('text_welcomeback');
         
         $data['text_search_shortcut1'] = $this->language->get('text_search_shortcut1');
         $data['text_search_shortcut2'] = $this->language->get('text_search_shortcut2');
