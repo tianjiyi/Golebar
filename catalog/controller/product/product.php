@@ -396,7 +396,23 @@ class ControllerProductProduct extends Controller {
 			$data['rating'] = (int)$product_info['rating'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
 			$data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
-
+                        
+                        //look up any hidden attributes to override
+                        foreach($data['attribute_groups'] as $key => $attribute_group){
+                            foreach($attribute_group['attribute'] as $attribute){
+                                if($attribute['name'] === '生产地' || $attribute['name'] === 'Country' ){
+                                    //override $location
+                                    $data['location'] = $attribute['text'];
+                                    $hidden_group_key = $key;
+                                }
+                            }
+                        }
+                        
+                        //remove hidden attribute group
+                        if(isset($hidden_group_key) && array_key_exists($hidden_group_key, $data['attribute_groups'])){
+                            unset($data['attribute_groups'][$hidden_group_key]);
+                        }
+                        
 			$data['products'] = array();
 
 			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
