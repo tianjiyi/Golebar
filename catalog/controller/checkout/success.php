@@ -15,7 +15,8 @@ class ControllerCheckoutSuccess extends Controller {
 			$order_id = $data['order_id'];
 		
 			$priceList = ""; //goodsprice
-			$quantityList = ""; // goodsmark
+//			$quantityList = ""; // goodsmark
+                        $markList = ""; // goodsmark
 			$key = "golebar2015"; //set in linkhaitao backend
 			$sig = md5($order_id.$key); // order+key
 			$sigUpdate = md5($order_id.'true'.''.$key); //order+valid+status+key
@@ -27,13 +28,18 @@ class ControllerCheckoutSuccess extends Controller {
 				$product_manufacture = $product['manufacturer_id'];
 				$product_price = $product['price'];
 				$product_quantity = $product['quantity'];
+                                $product_total_price = $product_price * $product_quantity;
 				$product_name = $product['name'];
 				if ($product_manufacture == "35") {
-					$priceList = $priceList.$product_price."|";
-					$quantityList = $quantityList.$product_quantity."|";
-					$nameList = $nameList.$product_name."|";
-				}
-				
+					$markList = $markList."1"."|";
+				}elseif (stripos($product_name, "月饼") || stripos($product_name, "mooncake")) {
+                                        $markList = $markList."3"."|";
+                                }else{
+                                    $markList = $markList."2"."|";
+                                }
+				$priceList = $priceList.$product_total_price."|";
+				//$quantityList = $quantityList.$product_quantity."|";
+				$nameList = $nameList.$product_name."|";
 			}
 			
 			if (isset($_COOKIE["linkhaitao"])) {
@@ -51,14 +57,15 @@ class ControllerCheckoutSuccess extends Controller {
 						
 					//get rid of last char
 					$priceList = rtrim($priceList, "|");
-					$quantityList = rtrim($quantityList, "|");
+					//$quantityList = rtrim($quantityList, "|");
 					$nameList = rtrim($nameList, "|");
+                                        $markList = rtrim($markList, "|");
 					
 					//post to linkhaitao
 				
 					//create
 					$url = 'http://www.linkhaitao.com/service/transfer.php?mod=create';
-					$myvars = 'order=' . $order_id . '&goodsname='. $nameList . '&goodsprice=' . $priceList . '&goodsmark=' . $quantityList . '&sig=' . $sig . '&trackid=' . $_COOKIE["linkhaitao"];
+					$myvars = 'order=' . $order_id . '&goodsname='. $nameList . '&goodsprice=' . $priceList . '&goodsmark=' . $markList . '&sig=' . $sig . '&trackid=' . $_COOKIE["linkhaitao"];
 					
 					$ch = curl_init( $url );
 					curl_setopt( $ch, CURLOPT_POST, 1);
@@ -81,8 +88,8 @@ class ControllerCheckoutSuccess extends Controller {
 					curl_setopt( $ch1, CURLOPT_HEADER, 0);
 					curl_setopt( $ch1, CURLOPT_RETURNTRANSFER, 1);
 					
-					$responseC = curl_exec( $ch1 );
-					setcookie("responseConfirm", $responseC, time() + 3600 * 24, '/');
+//					$responseC = curl_exec( $ch1 );
+//					setcookie("responseConfirm", $responseC, time() + 3600 * 24, '/');
 				}
 				
 			}
