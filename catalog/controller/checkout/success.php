@@ -88,8 +88,8 @@ class ControllerCheckoutSuccess extends Controller {
 					curl_setopt( $ch1, CURLOPT_HEADER, 0);
 					curl_setopt( $ch1, CURLOPT_RETURNTRANSFER, 1);
 					
-//					$responseC = curl_exec( $ch1 );
-//					setcookie("responseConfirm", $responseC, time() + 3600 * 24, '/');
+					$responseC = curl_exec( $ch1 );
+					setcookie("responseConfirm", $responseC, time() + 3600 * 24, '/');
 				}
 				
 			}
